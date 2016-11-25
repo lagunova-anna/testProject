@@ -1,0 +1,15 @@
+.app-content {
+    font-family: 'Open Sans', sans-serif;
+    background: #f7f7f8;
+    min-width: 1040px;
+    padding: 40px;
+    text-align: center;
+}
+
+.app-content > div {
+    margin: 0 1%;
+    padding: 15px;
+    float: left;
+    width: 44%;
+    height: 500px;
+}

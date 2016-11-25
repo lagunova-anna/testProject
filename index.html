@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <base href="/services">
+    <title>test App</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app/libs/jquery-ui.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet'
+          type='text/css'>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="app/libs/jquery-ui.min.js"></script>
+
+    <script src="systemjs.config.js"></script>
+
+    <script>
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+
+    <style>
+        body {
+            background: #f7f7f8;
+        }
+
+        #slider .ui-slider-handle {
+            width: 10px;
+            height: 14px;
+            cursor: pointer;
+        }
+
+        #slider .ui-slider-handle:focus {
+            outline: none;
+        }
+
+        #slider .ui-slider-range {
+            height: 5px;
+        }
+
+        #slider.ui-widget-content {
+            height: 5px;
+        }
+    </style>
+</head>
+
+<body>
+<app-main>loading...</app-main>
+</body>
+
+</html>

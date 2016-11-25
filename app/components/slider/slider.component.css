@@ -1,0 +1,13 @@
+#slider {
+    display: inline-block;
+    width: 150px;
+    margin-left: 20px;
+}
+
+.slider-label {
+    display: inline-block;
+    width: 22px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: right;
+}

@@ -1,0 +1,9 @@
+<div *ngIf="!image && !isLoadProgress" (dragover)="false" (dragend)="false" (dragover)="isDragover=true" dragleave="isDragover=false"
+     [ngClass]="isDragover ? 'hover' : ''"
+     (drop)="handleDrop($event)" class="upload-container">
+    <p>Drop Your Images Here</p>
+</div>
+<img [hidden]="!isLoadProgress" class="upload-spinner" src="../../../loading.gif">
+
+<img [src]="image" class="uploaded-image" *ngIf="image && !isLoadProgress">
+`

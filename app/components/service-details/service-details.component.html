@@ -1,0 +1,7 @@
+<div class="details-container">
+    <h2>{{service.title}}</h2>
+    <div class="service-price">{{service.price}} $</div>
+    <div class="service-city">in  {{service.city}}</div>
+    <div class="service-img" *ngIf="service.imgSRC"><img [src]="service.imgSRC"/></div>
+    <div>{{service.description}}</div>
+</div>

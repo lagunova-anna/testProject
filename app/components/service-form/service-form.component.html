@@ -1,0 +1,34 @@
+<form class="service-form">
+    <div class="form-title">Add a Service</div>
+    <div class="service-title">
+        <input type="text" [(ngModel)]="service.title" name="title" placeholder="title (required)"
+               required [ngClass]="{'invalid-field': title.invalid && !title.untouched}" #title="ngModel"><br>
+        <span class="validate-error" [hidden]="title.valid || title.untouched">
+            *required field
+        </span>
+    </div>
+    <div class="service-city">
+        <input type="text" [(ngModel)]="service.city" name="city" placeholder="city (required)"
+               required [ngClass]="{'invalid-field': city.invalid && !city.untouched}" #city="ngModel"><br>
+        <span class="validate-error" [hidden]="city.valid || city.untouched">
+            *required field
+        </span>
+    </div>
+    <div class="service-price">
+        <input type="text" [(ngModel)]="service.price" name="price" placeholder="price (required)" pattern="[0-9.]+"
+               required [ngClass]="{'invalid-field': price.invalid && !price.untouched}"  #price="ngModel"><br>
+        <span class="validate-error" [hidden]="price.valid || price.untouched">
+            invalid value
+        </span>
+    </div>
+    <div class="service-description">
+        <textarea [(ngModel)]="service.desc" name="desc" placeholder="description" row="6"></textarea>
+    </div>
+    <div class="service-image">
+        <image-uploader (notifyLoadImage)='notifyLoadImage($event)'></image-uploader>
+    </div>
+    <button class="save-btn" (click)="addService()"
+            [disabled]="title.invalid || city.invalid || price.invalid">
+        Save
+    </button>
+</form>

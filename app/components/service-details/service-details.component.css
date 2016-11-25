@@ -1,0 +1,30 @@
+.details-container{
+    text-align: center;
+    background: #fff;
+    padding: 30px 30px 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.service-price, .service-city {
+    display: inline-block;
+}
+
+.service-price{
+    font-size: 19px;
+    background: #545454;
+    color: #fff;
+    padding: 5px 12px;
+    margin: 4px 7px;
+}
+
+.service-img img {
+    width: 94%;
+    max-width: 500px;
+    height: auto;
+    margin: 12px;
+}
+
+h2{
+    text-transform: uppercase;
+    margin: 2px auto;
+}

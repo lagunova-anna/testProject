@@ -1,0 +1,24 @@
+<div class="filters-row">
+    <div class="search-field">
+        <input type="text" placeholder="search" [(ngModel)]="searchString" class="search-field">
+        <span class="fa fa-search search-icon" [hidden]="searchString"></span>
+        <span class="fa fa-times clean-icon" (click)="searchString=''" [hidden]="!searchString || searchString.length == 0"></span>
+    </div>
+    <filter-slider (notify)='onNotify($event)'></filter-slider>
+</div>
+
+<div class="table-container">
+    <table class="services-table" *ngIf="services && services.length > 0">
+        <tr *ngFor="let service of services | filterPrice:priceValues | search:searchString"
+            [ngClass]="{'active-service': activeServiceId && service.id === activeServiceId}"
+            class="table-row" (click)="showDetails(service)">
+            <td>{{service.title}}</td>
+            <td>{{service.price}}</td>
+            <td>{{service.city}}</td>
+        </tr>
+    </table>  
+</div>
+
+<button class="service-btn" (click)="openForm()">
+    Add new service
+</button>
